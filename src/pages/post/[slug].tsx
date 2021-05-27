@@ -1,7 +1,6 @@
-/* eslint-disable react/no-danger */
-/* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-return-assign */
+/* eslint-disable react/no-danger */
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { format } from 'date-fns';
 import { RichText } from 'prismic-dom';
@@ -86,7 +85,7 @@ export default function Post({
   const isPostEdited =
     post.first_publication_date !== post.last_publication_date;
 
-  let editionDate;
+  let editionDate: string;
   if (isPostEdited) {
     editionDate = format(
       new Date(post.last_publication_date),
