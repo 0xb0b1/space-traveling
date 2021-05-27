@@ -86,8 +86,6 @@ export default function Home({
     setPosts([...posts, ...newPosts]);
   }
 
-  console.log(posts);
-
   return (
     <>
       <Head>
